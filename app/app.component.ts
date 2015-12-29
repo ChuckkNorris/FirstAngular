@@ -1,5 +1,5 @@
 import {Component, OnInit} from 'angular2/core';
-import {Http, HTTP_PROVIDERS} from 'angular2/http';
+//import {Http, HTTP_PROVIDERS} from 'angular2/http';
 import {Hero} from './hero';
 import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 import {HeroService} from './hero-service/hero.service';
@@ -12,7 +12,7 @@ import {HeroService} from './hero-service/hero.service';
     providers: [HeroService]
 })
 export class AppComponent implements OnInit {
-    constructor(private _heroService: HeroService, private _http: Http) { }
+    constructor(private _heroService: HeroService) { }
     ngOnInit() {
         this.getHeroes();
         

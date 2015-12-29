@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/http', './hero-detail/hero-detail.component', './hero-service/hero.service'], function(exports_1) {
+System.register(['angular2/core', './hero-detail/hero-detail.component', './hero-service/hero.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,15 +8,12 @@ System.register(['angular2/core', 'angular2/http', './hero-detail/hero-detail.co
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1, hero_detail_component_1, hero_service_1;
+    var core_1, hero_detail_component_1, hero_service_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (http_1_1) {
-                http_1 = http_1_1;
             },
             function (hero_detail_component_1_1) {
                 hero_detail_component_1 = hero_detail_component_1_1;
@@ -26,9 +23,8 @@ System.register(['angular2/core', 'angular2/http', './hero-detail/hero-detail.co
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent(_heroService, _http) {
+                function AppComponent(_heroService) {
                     this._heroService = _heroService;
-                    this._http = _http;
                     this.title = 'Tour of Heroes';
                 }
                 AppComponent.prototype.ngOnInit = function () {
@@ -52,7 +48,7 @@ System.register(['angular2/core', 'angular2/http', './hero-detail/hero-detail.co
                         directives: [hero_detail_component_1.HeroDetailComponent],
                         providers: [hero_service_1.HeroService]
                     }), 
-                    __metadata('design:paramtypes', [hero_service_1.HeroService, http_1.Http])
+                    __metadata('design:paramtypes', [hero_service_1.HeroService])
                 ], AppComponent);
                 return AppComponent;
             })();

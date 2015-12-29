@@ -27,11 +27,27 @@
             "stopOnEntry": true,
             "sourceMaps": true
         },
+        {
+        "name": "Launch Chrome",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:8080/", //Change to whatever you homepage is
+        "runtimeArgs": [
+            "--new-window", //Open in new window
+            "--user-data-dir=C:/dev/", //Can be any directory. Makes chrome load in a different directory so that it opens in a new instance.
+            "--remote-debugging-port=9222" //Open in port 9222 (standard chrome debug port)
+        ],
+        "webRoot": "app/", //The directory that contains js, ts and map files
+        "sourceMaps": true
+        },
 		{
 			"name": "Attach",
-			"type": "node",
+			"type": "chrome",
 			"request": "attach",
-			"port": 5858
+			"port": 8080,
+            "webRoot": "./app/bin",
+            "sourceMaps": true
+           
 		}
 	]
 }
